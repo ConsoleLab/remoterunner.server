@@ -1,0 +1,24 @@
+{
+  "name": "remoterunner.server",
+  "desc": "Server application of remotely running console commands on a host.",
+    "osOnly": false,
+    "pargs": [
+      {
+        "name": "file",
+        "minc": 1,
+        "maxc": 1,
+        "desc": "AMS csv data file"
+      }
+    ],
+    "oargs": [
+      {
+        "short": "b",
+        "long": "bits",
+        "name": "bits",
+        "minc": 1,
+        "maxc": 1,
+        "desc": "number of data bits"
+      }
+    ],
+    "opts": []
+}

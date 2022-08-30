@@ -1,5 +1,16 @@
-cmake_minimum_required(VERSION 3.20.2)
+cmake_minimum_required(VERSION 3.16.3)
+file(STRINGS config.json PROGRAM)
+file(READ config.json TEMP)
+string(REPLACE ";" "" PROGRAM "${PROGRAM}")
+string(REPLACE "\"" "\\\"" PROGRAM "${PROGRAM}")
+message(STATUS "Program definition: 
+${TEMP}"
+)
+add_definitions(-DPROGRAM="${PROGRAM}")
+
+
 project(remoterunner.server VERSION 0.1.0)
+
 
 if (WIN32)
   add_definitions(-D_CRT_SECURE_NO_WARNINGS)

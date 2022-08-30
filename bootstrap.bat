@@ -3,8 +3,8 @@
 MKDIR build
 CD build
 
-IF [%1]==[] GOTO 64BIT
-IF "%1"=="x86" GOTO 32BIT
+IF [%1]==[] GOTO 32BIT
+IF "%1"=="x64" GOTO 64BIT
 
 ECHO Unrecognized building architecture: "%1"
 GOTO EXIT

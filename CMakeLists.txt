@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.20.2)
-project(remote-runner VERSION 0.1.0)
+project(remoterunner.server VERSION 0.1.0)
 
 if (WIN32)
   add_definitions(-D_CRT_SECURE_NO_WARNINGS)
